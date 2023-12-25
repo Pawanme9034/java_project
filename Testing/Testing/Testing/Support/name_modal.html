@@ -1,0 +1,526 @@
+<form action="" id="addlead2">
+                    <div class="row">
+                        <div class="col-md-8 pt-4 ps-3">
+                            <div id="releted">
+                                <h6>Related: <a href="#" target="_blank">CCTV CAMERA</a></h6>
+                                <div>Milestone: meeting</div>
+                            </div>
+                        </br>
+                            <div class="ps-3">
+                                <a href="#" class="btn pe-0 me-0 shadow-none d-inline-block"> <button type="button" class="btn tick-btn me-0 text-dark" data-bs-toggle="tooltip" data-bs-title="Mark as Complete"><i class="fa fa-check"></i></button></a>
+                                <a href="#" class="btn btn_border shadow-none d-inline-block" data-bs-toggle="tooltip" data-bs-title="Statistics"><i class="fa fa-bar-chart" data-bs-toggle="modal" data-bs-target="#exampleModal1"></i></a>
+                                <a href="#collapseOne" role="button" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapseOne" class="btn btn_border shadow-none d-inline-block"  data-bs-toggle="tooltip" data-bs-title="Timelines"><i class="fa fa-th-list"></i></a>
+                                <a href="#" class="btn color_green shadow-none d-inline-block text-dark" onclick="showModal();"><i class="fa fa-clock-o"></i> START TIMER</a>
+                            </div>
+                            <br>
+                            <hr class="fileline">
+                            <div class="accordion">
+                                <div class="accordion-item">
+                                    <div id="collapseOne" class="accordion-collapse collapse "
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Member</th>
+                                                        <th>Start Time</th>
+                                                        <th>End Time</th>
+                                                        <th>Time Spent</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="5" class="text-center">No started timers found
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="odd">
+                                                        <td colspan="5" class="add-timesheet">
+                                                            <div class="col-md-12">
+                                                                <p class="font-medium mt-1">Add timesheet</p>
+                                                                <hr class="fileline">
+                                                            </div>
+                                                            <div class="timesheet-start-end-time">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="timesheet_start_time"
+                                                                                class="control-label">Start Time</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label for="timesheet_start_time"
+                                                                                class="control-label">Start Time</label>
+                                                                            <input type="date" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="timesheet_start_time"
+                                                                        class="control-label">Member</label>
+                                                                    <select name="" id="" class="selectpicker">
+                                                                        <option value=""></option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12">
+                                                                <div class="form-group">
+                                                                    <label for="timesheet_start_time"
+                                                                        class="control-label">Note</label>
+                                                                    <textarea name="" id="" class="form-control"
+                                                                        rows="4"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-12 text-right">
+                                                                <button data-task-id="122"
+                                                                    class="btn btn-success task-single-add-timesheet"><i
+                                                                        class="fa fa-plus"></i> Save</button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div id="description">
+                                <h6 class="fw-normal">Description <a href="#" onclick="fnChangeBorder('demo');"><i class="fa fa-pencil-square-o"></i></a>
+                                </h6>
+
+                                <div id="demo">
+                                    <span><input class="border border-white rounded-6" type="text" name="no description available" value="no description available"></span>
+
+                                </div>
+                            </div>
+                            <hr class="fileline">
+                            <a href="#" role="button" id="add_btn"><span><i class="fa fa-plus-circle"></i>Checklist
+                                    Item</span></a>
+                            <div class="mb-3 mt-1">
+                                <select name="" id="" class="selectpicker border-0 p-0" data-live-search="true"
+                                    data-none-selected-text="Insert Checklist Template"
+                                    placeholder="Insert Checklist Template">
+                                    <option id="" value="">DJ</option>
+                                    <option id="" value="">DJ</option>
+                                    <option id="" value="">DJ</option>
+                                </select>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p class="text-muted">Checklist item not found for this task</p>
+                                </div>
+                                <div class="row checklist-items-wrapper">
+                                    <div class="col-md-12 ">
+                                       <div id="checklist-items" class="ui-sortable"><div class="clearfix"></div>
+                            <h4 class="bold chk-heading th font-medium pull-left">Checklist Items</h4>
+                            <div class="pull-right chk-toggle-buttons">
+                                <button class="btn btn-xs btn-default hide" data-hide="1" onclick="toggle_completed_checklist_items_visibility(this)">
+                                    Hide completed items        </button>
+                                        <button class="btn btn-xs btn-default" data-hide="0" onclick="toggle_completed_checklist_items_visibility(this)">
+                                    Show completed items (<span class="task-total-checklist-completed">2</span>)        </button>
+                            </div>
+                            <div class="clearfix"></div>
+                        <div class="progress mtop15 no-mbot">
+                            <div class="progress-bar not-dynamic progress-bar-default task-progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 66.67%;">66.67%</div>
+                        </div>
+                        <div class="d-flex flex-column">
+                                    <div>
+                                    
+                        </div>
+                                <div>
+                                    <div class="checklist hide" data-checklist-id="705">
+                                       <div class="d-flex">
+                                        <div class="checkbox checkbox-success checklist-checkbox" data-toggle="tooltip" title="">
+                                            <input type="checkbox" name="checklist-box" checked="">
+                                            <label for=""><span class="hide"></span></label>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                          <textarea data-taskid="419" name="checklist-description" rows="1"></textarea>
+                                      </div>
+                                      <div class="mleft10">
+                                                            <a href="#" class="pull-right text-muted remove-checklist" onclick="delete_checklist_item(705,this); return false;"><i class="fa fa-remove"></i>
+                                            </a>
+                                                                            <a href="#" class="pull-right text-muted mright5 save-checklist-template hide" data-toggle="tooltip" data-title="Save as Template" onclick="save_checklist_item_template(705,this); return false;">
+                                                <i class="fa fa-level-up" aria-hidden="true"></i>
+                                            </a>
+                                                                            <span class="pull-right mright5 mtop1 dropdown" data-title="Assign staff" data-toggle="tooltip">
+                                            <a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="checklist-item-705" onclick="return false;">
+                                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="checklist-item-705">
+                                                                            <li>
+                                                            <a href="#" onclick="save_checklist_assigned_staff('1', '705'); return false;">
+                                                                    SHAMART HOLDINGS  [PVT] LTD                                            </a>
+                                                        </li>
+                                                                    </ul>
+                                        </span>
+                                                      </div>
+                                </div>
+                                            <p class="font-medium-xs mtop15 text-muted checklist-item-info">
+                                        Completed by SHAMART HOLDINGS  [PVT] LTD            </p>
+                                    </div>
+                        </div>
+                                <div>
+                                    <div class="checklist hide" data-checklist-id="700">
+                                       <div class="d-flex">
+                                        <div class="checkbox checkbox-success checklist-checkbox" data-toggle="tooltip" title="">
+                                            <input type="checkbox" name="checklist-box" checked="">
+                                            <label for=""><span class="hide"></span></label>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                          <textarea data-taskid="419" name="checklist-description" rows="1"></textarea>
+                                      </div>
+                                      <div class="mleft10">
+                                                            <a href="#" class="pull-right text-muted remove-checklist" onclick="delete_checklist_item(700,this); return false;"><i class="fa fa-remove"></i>
+                                            </a>
+                                                                            <a href="#" class="pull-right text-muted mright5 save-checklist-template hide" data-toggle="tooltip" data-title="Save as Template" onclick="save_checklist_item_template(700,this); return false;">
+                                                <i class="fa fa-level-up" aria-hidden="true"></i>
+                                            </a>
+                                                                            <span class="pull-right mright5 mtop1 dropdown" data-title="Assign staff" data-toggle="tooltip">
+                                            <a href="#" class="text-muted dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="checklist-item-700" onclick="return false;">
+                                                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="checklist-item-700">
+                                                                            <li>
+                                                            <a href="#" onclick="save_checklist_assigned_staff('1', '700'); return false;">
+                                                                    SHAMART HOLDINGS  [PVT] LTD                                            </a>
+                                                        </li>
+                                                                    </ul>
+                                        </span>
+                                                      </div>
+                                </div>
+                                            <p class="font-medium-xs mtop15 text-muted checklist-item-info">
+                                        Completed by SHAMART HOLDINGS  [PVT] LTD            </p>
+                                    </div>
+                        </div>
+                        </div>
+                        
+                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                 </div>
+                                <div class="col-12">
+                                    <h6 class="mb-3">Checklist Items</h6>
+                                    <div id="parentt" class="d-flex flex-column">
+                                        <div id="clitem">
+                                            <div class="d-flex align-items-center border border-white shadow-sm">
+                                                <div class="">
+                                                    <input type="radio" name="" id="" class="">
+                                                </div>
+                                                <div class="flex-grow-1 p-1">
+                                                    <input name="" id="" rows="1"
+                                                        class="checklist_testarea">
+                                                </div>
+                                                <div class="p-1">
+                                                    <span class="dropdown">
+                                                        <a href="#" class="" data-bs-toggle="dropdown" role="button"
+                                                            aria-expanded="false"><i data-bs-toggle="tooltip" data-bs-title="Assign staff" class="fa fa-user-plus feature-icon"></i></a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="#" class="assign">DJ solution</a></li>
+                                                            <li><a href="#">GTS solution</a></li>
+                                                        </ul>
+                                                    </span>
+                                                    <a href="#"><i class="fa fa-level-up feature-icon"></i></a>
+                                                    <a href="#" role="button" id="remove_btn"><i
+                                                            class="fa fa-remove feature-icon"></i></a>
+                                                </div>
+
+                                            </div>
+                                            <div class="user_assign">
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="fileline">
+                            <div>
+                                <div class="float-start">
+                                    <a href="#"><img src="assets/img/user.png" alt="user" class="staff_user"></a>
+                                    <a href="#"><small class="date_border">6 days ago</small></a>
+                                    <br>
+                                    <a href="#" class="ms-5">GTS Solution</a>
+                                </div>
+                                <div class="float-end">
+                                    <a href="#textarea" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="textarea"><i class="fa fa-pencil-square-o"></i></a>
+                                    <a href="#"><i class="fa fa-remove text-danger"></i></a>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            
+                            <div class="collapse pt-3" id="textarea">
+                                <form action="">
+                                    <div id="summernote"></div>
+
+                                    <div class="mt-2" style="border:1px dotted black;height:100px">
+                                        <label class="d-flex align-items-center justify-content-center w-100"
+                                            style="height:100% ;color:#307fe6">Drop files here to upload
+                                            <input type="file" class="w-100 d-none" style="height:100%;">
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <hr class="fileline">
+                            <div>
+                                <a href="" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                                aria-controls="textarea" id="pencilbtn">Comments</a>
+                                <div class="ms-5 me-5">
+                                  
+                                    <div id="element2" style="display: none;">
+                                        <textarea name="" id="" rows="4" class="w-100">592952929</textarea>
+                                        <div class="text-end taskfooter">
+                                            <button id="close_btn" type="button" class="taskclose1">CLOSE</button>
+                                            <button type="button" class="tasksave1">SAVE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- column two -->
+                        <div class="col-md-4 me-0 bkd_color float-end">
+                            <section id="sblock1 " class="mt-3">
+                                <span class="title ">Task Info</span><span><button type="button" class="ps-1 bkd_color text-primary border border-primary">Recurring Task</button></span>
+                                <a href="#" role="button" data-bs-toggle="popover1" id="edit" data-bs-placement="bottom"
+                                    title=" Actions" class="float-end">
+                                    <span class="taskinfo ">
+                                        <i class="fa fa-circle-thin circle-icon"></i>
+                                        <i class="fa fa-circle-thin circle-icon"></i>
+                                        <i class="fa fa-circle-thin circle-icon"></i>
+                                    </span>
+                                </a>
+                                <div id="popover-content1">
+                                    <ul class="list-group custom-popover" style="display:none;">
+                                        <hr class="fileline">
+                                        <li class=""><a href="#" class="text-primary">Edit</a></li>
+                                        <li class=""><a href="#" class="text-primary">Copy</a></li>
+                                        <li class=""><a href="#" class="text-primary">Delete</a></li>
+                                    </ul>
+                                </div>
+                                <div class="clearfix"></div>
+                                <span style="font-size:10px">Created at 2023-02-07 15:06:56</span>
+
+                            </section>
+                            <hr class="fileline">
+                            <!--End of sblock1-->
+                            <section id="sblock2">
+                                <div class="mb-2">
+                                    <i class="bi bi-star-half"></i>
+                                    <span class="side-text">Status: </span>
+                                    <a href="#" class="date_border status-text" data-bs-toggle="popover2" id="edit"
+                                        data-placement="bottom" title="Change Status">In Progress</a>
+                                    <div id="popover-content2">
+                                        <ul class="list-group custom-popover" style="display:none">
+                                            <hr class="fileline">
+                                            <li class=""><a href="#" class="text-primary">Mark as Not Started</a></li>
+                                            <li class=""><a href="#" class="text-primary">Mark as Texting</a></li>
+                                            <li class=""><a href="#" class="text-primary">Mark as Awaiting Feedback</a></li>
+                                            <li class=""><a href="#" class="text-primary">Mark as Complete</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mb-2">
+                                    <i class="bi bi-calendar2-plus"></i>
+                                    <span class="side-text">Start Date: </span>
+                                    <span><input type="date" class="date_border" id="startdate" name="startdate"></span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-calendar2-check"></i>
+                                    <span class="side-text">End Date: </span>
+                                    <span><input type="date" class="date_border" id="enddate" name="enddate"></span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-lightning-fill"></i>
+                                    <span class="side-text">Priority: </span>
+                                    <span><a href="#" class="date_border" data-bs-toggle="popover3" data-placement="bottom"
+                                        title="Priority">Medium</a></span>
+                                    <div id="popover-content3">
+                                        <ul class="list-group custom-popover" style="display:none;">
+                                            <hr class="fileline">
+                                            <li class=""><a href="#" class="text-primary">Low</a></li>
+                                            <li class=""><a href="#" class="text-primary">High</a></li>
+                                            <li class=""><a href="#" class="text-primary">Urgent</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="side-text">Hourly Rate: 0.00</span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-credit-card"></i>
+                                    <span class="side-text">Billable: Not Billable</span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-file-earmark-text-fill"></i>
+                                    <span class="side-text">Bilable Amount:<span class="side-text"> 0.00</span></span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-asterisk"></i>
+                                    <span class="side-text font-size-13">Your login time: 00.00</span>
+                                </div>
+
+                                <div class="mb-2">
+                                    <i class="bi bi-clock"></i>
+                                    <span class="side-text">Your Total login time: </span>
+                                    <span class="time">00.00</span>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="checkbox">
+                                    <label class="side-text">Job number<span> 2</span></label>
+                                </div>
+                                <select name="" id="" class="selectpicker form-control" placeholder="Tags">
+                                    <option value="">21321</option>
+                                    <option value="">C++</option>
+                                    <option value="">8GB</option>
+                                </select>
+
+                            </section>
+                            <hr class="fileline">
+                            <!--End of sblock2-->
+                            <section id="sblock3">
+                                <div class="mb-1">
+                                    <i class="bi bi-bell"></i>
+                                    <span class="mb-2">Remainders</span>
+                                </div></br>
+                                <div class="mb-1 accordion" id="accordionExample2"
+                                    style="    background-color: #f0f5f7">
+                                    <div class="accordion-item" style="border:none;background-color: #f0f5f7">
+                                        <a href="#" class=" ps-0" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsetwo" aria-expanded="true"
+                                            aria-controls="collapsetwo"
+                                            style="background-color: #f0f5f7 ;color: #008ece;background-image: none;">Create
+                                            Remainder</a>
+
+                                        <div>
+                                            <span>No reminders for this task</span>
+                                        </div>
+
+                                        <div id="collapsetwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordionExample2">
+                                            <div class="accordion-body p-0 mt-2">
+                                                <div class="mb-2">
+                                                    <label><span style="color:red">*</span>Date to be notified</label>
+                                                    <input type="date" class="form-control">
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label>
+                                                        <span style="color:red">*</span>Set reminder To
+                                                    </label>
+                                                    <select name="" id="" class="selectpicker form-control"
+                                                        data-live-search="true" multiple data-live-search="true"
+                                                        placeholder="Assign task to">
+                                                        <option value="">GTS solutions</option>
+                                                        <option value="">Jasir Jasir</option>
+                                                        <option value="">Salsa Billa</option>
+                                                    </select>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <label><span style="color:red">*</span>Description</label>
+                                                    <textarea name="" id="" class="form-control w-100"
+                                                        rows="3"></textarea>
+                                                </div>
+
+                                                <div class="mb-2 d-flex align-items-center">
+                                                    <input type="checkbox" class="me-1"><label
+                                                        style="font-size: 11px;">Send also an
+                                                        email for this reminder</label>
+                                                </div>
+                                                <button type="button" class="btn  d-flex justify-content-end ms-auto"
+                                                    style="font-size:14px;background-color: #03a9f4; color:white">CREATE
+                                                    A REMINDER</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                            <hr class="fileline">
+                            <!--End of sblock3-->
+                            <section id="sblock4">
+                                <i class="bi bi-person"></i>
+                                <span>Assignees</span>
+                                <br>
+                                <select name="" id="" class="selectpicker" data-live-search="true"
+                                    placeholder="Tags" multiple>
+                                    <option value=""></option>
+                                    <option value="56">Yogesh Ramdasi</option>
+                                    <option value="64">Utoren Utoren</option>
+                                    <option value="60">tshrteireretshrteirere tshrteireretshrteireretshrteirere</option>
+                                    <option value="48">Test Nana</option>
+                                    <option value="58">test test</option>
+                                    <option value="66">test 1</option>
+                                    <option value="55">surya pratap</option>
+                                    <option value="51">Shashi Kumar</option>
+                                    <option value="49">salsa billa</option>
+                                    <option value="46">Ray Red 123</option>
+                                    <option value="63">Mohamed hk</option>
+                                    <option value="53">Manjunath DS</option>
+                                    <option value="54">Lalit Kumar</option>
+                                    <option value="57">Kiran Shinde</option>
+                                    <option value="61">Jasir Jasir</option>
+                                    <option value="50">jashem bangladish</option>
+                                    <option value="59">Innocent kamanzi</option>
+                                    <option value="1">GTS Solution</option>
+                                </select>
+                                <br>
+                                <div>
+                                    <a href="#"><img
+                                            src="https://perfexmodules.gtssolution.site/assets/images/user-placeholder.jpg"
+                                            alt="user" class="staff_user"></a>
+                                    <br>
+                                    <!-- <a href="#" style="color:red" class="bi bi-x ms-2"></a> -->
+                                </div>
+
+                            </section>
+                            <hr class="fileline">
+                            <!--End of sblock4-->
+                            <section id="sblock5">
+                                <i class="bi bi-person"></i>
+                                <span>Followers</span></br>
+                                <select name="followers" id="followers" class="selectpicker form-control" multiple
+                                    data-live-search="true" placeholder="Tags">
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                                <br>
+                                <span>No followers for this task</span>
+                            </section>
+                            <hr class="fileline">
+                            <!--End of sblock5-->
+                            <section id="sblock6">
+                                <div class="">
+                                    <div id="drop-zone">
+                                        <img src="" alt="">
+                                        <p class="dropfile">Drop file or click to upload</p>
+                                        <label for="myfile" class="file-input-label">
+                                            <input type="file" id="myfile">
+                                        </label>
+                                    </div>
+                                    <div class="text-container">
+                                        <div class="file-name"></div>
+                                        <button class="delete-button btn-danger" id="deleteBtn">Delete</button>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+
+                    </div>
+</form>

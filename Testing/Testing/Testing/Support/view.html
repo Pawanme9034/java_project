@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM</title>
+    <!--Bootstrap 5 CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/Bootstrap5/css/bootstrap.css">
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/buttons.dataTables.min.css">
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="../../assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="../../assets/Bootstrap5/css/bootstrap-select.min.css">
+    <script src="../../assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+
+    <!--summernote_textarea-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        body{
+            margin-bottom: 50px;
+        }
+        .linehr{
+            margin: 0px;
+        }
+        .dangerclr {
+            color: #fff;
+            background-color: #fc2d42;
+            border-color: #fc2d42;
+            border-radius: 3px;
+        }
+        .section7{
+            background-color: #e3e8ee;
+            padding: 3px 20px 3px 20px !important;
+        }
+        .section2{
+            background-color: #f7f9fa;
+            border: 1px solid #dce1ef;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .convert-fo{
+            margin: 0px !important;
+            font-size: 16px !important;
+        }
+        .section1{
+            margin-top: 25px !important;
+            margin-bottom: 25px !important;
+            border-radius: 5px !important;
+        }
+        .section3{
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .op-data{
+            opacity: 0.5;
+        }
+        .start_timer{
+        color: #84c429;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container-fluid tblcontainer1 section7">
+    
+    <section class="bg-white">
+        <div class="tblcontainer1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="desk">
+                            <div class="">
+                                <hr class="fileline linehr">
+                                <div class="tabsss">
+                                    <div class="tabss">
+                                        <div class="tabs d-flex newtabml ml-2">
+                                            <div>
+                                                <button class="tablinks active customer"
+                                                    onclick="opentab1(event, 'Tab1')" style="width:150px;">Add
+                                                    Reply</button>
+                                            </div>
+                                            <div>
+                                                <button class="tablinks" style="width:140px"
+                                                    onclick="opentab1(event, 'Tab2')">Add Note</button>
+                                            </div>
+                                            <div>
+                                                <button class="tablinks" style="width:140px"
+                                                    onclick="opentab1(event, 'Tab3')">Reminders</button>
+                                            </div>
+                                            <div>
+                                                <button class="tablinks" style="width:150px"
+                                                    onclick="opentab1(event, 'Tab4')">Other Tickets</button>
+                                            </div>
+                                            <div>
+                                                <button class="tablinks" style="width:140px"
+                                                    onclick="opentab1(event, 'Tab5')">Tasks</button>
+                                            </div>
+                                            <div>
+                                                <button class="tablinks" style="width:140px"
+                                                    onclick="opentab1(event, 'Tab6')">Settings</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="carouselExampleIndicators" class="carousel slidemt" data-bs-interval="false">
+                            <div class="carousel-inner scroll-images">
+
+                                <div class="carousel-item active" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto">
+                                            <button class="tablinks tabresact active" style="width:70%"
+                                                onclick="opentab1(event, 'Tab1')">Add Reply</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%"
+                                                onclick="opentab1(event, 'Tab2')">Add Note</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%"
+                                                onclick="opentab1(event, 'Tab3')">Reminders</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%"
+                                                onclick="opentab1(event, 'Tab4')">Other Tickets</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%"
+                                                onclick="opentab1(event, 'Tab5')">Tasks</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <div class="container">
+                                        <div class="child mb-0" style="height:auto;">
+                                            <button class="tablinks tabresact" style="width:70%"
+                                                onclick="opentab1(event, 'Tab6')">Settings</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"
+                                    style="margin-top:10px">
+                                    <i class="bi bi-chevron-left icon" style="color:black;font-weight: bold;"></i>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next"
+                                    style="margin-top:10px">
+                                    <i class="bi bi-chevron-right icon" style="color:black;font-weight:bold"></i>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="fileline m-0">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- For Tab 1 -->
+    <section class="bg-white section1">
+        <div id="Tab1" class="tabcontent" style="display: block;">
+        <div class="section3">
+        <section class="">
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="purchasegrp">
+                        <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5>
+                    </div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <div class="bxdiv fa-pull-right">
+                                <div class="purchasegrp">
+                                    <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                        <option value="1">Open</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="2">Answered</option>
+                                        <option value="2">Jayarani</option>
+                                        <option value="2">On Hold</option>
+                                        <option value="2">Closed</option>
+                                        <option value="2">ETR Design</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchasegrp">
+                            <button class="closexbtn"><i class="fa fa-remove"></i></button>
+                            <span class="undelsp draftsp">Priority:Medium</span>
+                            <span class="undelsp draftsp">Department: Professional Services</span>
+                            <span class="undelsp acceptsp">Assigned:GTS Solution</span>
+                            <span class="undelsp mappedsp">Last Reply: 2 months ago</span>
+                            <span class="undelsp acceptsp">View Public Form</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                            <div class="purchasegrp">
+                                <select class="selectpicker form-control" data-live-search="true" title="Insert predefined reply">
+                                    <option value="1">MR KIM</option>
+                                </select>
+                            </div>
+                        </div>
+                    <div class="col-md-6">
+                            <div class="purchasegrp">
+                                <select class="selectpicker form-control" data-live-search="true" title="Insert knowledge base link">
+                                    <option value="0"></option>
+                                    <option value="1" class="border border-bottom">Assunzione sales</br>ajajh</option>
+                                    <option value="2">Track Ilinenary leads</br>putin hui</option>
+                                </select>
+                            </div>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="purchasegrp">
+                        <div id="summernote"></div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="section2">
+                <div class="row">
+                    <div class="col-md-12">
+                                        <div class="purchasegrp">
+                                                <label for="tags" class="purchaseinfo mb-1">Change Status</label>
+                                                <select class="selectpicker form-control" data-live-search="true">
+                                                    <option value="1">Open</option>
+                                                    <option value="2">In Progress</option>
+                                                    <option value="2">Answered</option>
+                                                    <option value="2">Jayarani</option>
+                                                    <option value="2">On Hold</option>
+                                                    <option value="2">Closed</option>
+                                                    <option value="2">ETR Design</option>
+                                                </select>
+                                            </div>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                                        <div class="purchasegrp">
+                                            <label class="purchaseinfo">CC</label>
+                                            <input type="text" class="form-control purchaseselects">
+                                        </div>
+                        </div>
+                </div>
+                <hr class="fileline">
+                <div class="row">
+                <div id="parent1" class="row">
+                    <div class="col-md-4">
+                        <div class="chseexc ">
+                            <label for="" class="purchaseinfo mb-1">Attachment</label>
+                            <div class="input-group d-flex flex-nowrap">
+                                <input type="file" class="file_in">
+                                <span class="input-group-addon">
+                                    <button id="add_btn1" type="button" class="ctctgrnbtn"><i class="fa fa-plus"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </section>
+        </div>
+        </div>
+        <!-- for Tab  2 -->
+
+        <div id="Tab2" class="tabcontent" style="display: none;">
+        <div class="section3">
+            <div class="row">
+                <div class="col-md-8">
+                <div class="purchasegrp">
+                    <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5>
+                </div>
+                </div>
+
+                <div class="col-md-4 ">
+                    <div class="bxdiv fa-pull-right">
+                            <div class="purchasegrp">
+                                <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                    <option value="1">Open</option>
+                                    <option value="2">In Progress</option>
+                                    <option value="2">Answered</option>
+                                    <option value="2">Jayarani</option>
+                                    <option value="2">On Hold</option>
+                                    <option value="2">Closed</option>
+                                    <option value="2">ETR Design</option>
+                                </select>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="fileline">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="purchasegrp">
+                        <label class="emailpro ">Note</label>
+                        <textarea class="textdesc  " rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="taskfooter text-end">
+                        <button type="submit" class="tasksave1">ADD NOTE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+
+        <!-- For Tab 3 -->
+        <div id="Tab3" class="tabcontent" style="display: none;">
+            <div class="section3">
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="purchasegrp">
+                        <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5></br>
+                        <button type="submit" class="hrbtns contractbtn convert-fo" onclick="showModal('remainder_modal.html','Set Ticket Reminder')"><i class="bi bi-bell-fill"></i> SET TICKET REMINDER</button>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-4 ">
+                        <div class="bxdiv fa-pull-right">
+                                <div class="purchasegrp">
+                                    <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                        <option value="1">Open</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="2">Answered</option>
+                                        <option value="2">Jayarani</option>
+                                        <option value="2">On Hold</option>
+                                        <option value="2">Closed</option>
+                                        <option value="2">ETR Design</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="demo-html mt-0">
+                    <table class="example display dataTable display responsive nowrap tblalign table"
+                        style="width: 100%" aria-describedby="example_info">
+                        <thead class="theadrow">
+                            <tr>
+                                <th>
+                                    Description
+                                </th>
+                                <th>
+                                    Date
+                                </th>
+                                <th>
+                                    Remind
+                                </th>
+                                <th>
+                                    Is notified?
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="">test</a>
+                                    <p class="header-effect">
+                                        <a href="#" onclick="showModal('remainder_modal.html','Set Ticket Reminder')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td>2023-10-10 21:59:00</td>
+                                <td><a href="#"><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> Huê Nguyễn Thị</a></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">test</a>
+                                    <p class="header-effect">
+                                        <a href="#" onclick="showModal('remainder_modal.html','Set Ticket Reminder')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td>2023-10-10 21:59:00</td>
+                                <td><a href="#"><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> Huê Nguyễn Thị</a></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">test</a>
+                                    <p class="header-effect">
+                                        <a href="#" onclick="showModal('remainder_modal.html','Set Ticket Reminder')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td>2023-10-10 21:59:00</td>
+                                <td><a href="#"><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> Huê Nguyễn Thị</a></td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><a href="">test</a>
+                                    <p class="header-effect">
+                                        <a href="#" onclick="showModal('remainder_modal.html','Set Ticket Reminder')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td>2023-10-10 21:59:00</td>
+                                <td><a href="#"><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> Huê Nguyễn Thị</a></td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <!-- for Tab 4 -->
+        <div id="Tab4" class="tabcontent" style="display: none;">
+            <div class="section3">
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="purchasegrp">
+                        <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5></br>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-4 ">
+                        <div class="bxdiv fa-pull-right">
+                                <div class="purchasegrp">
+                                    <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                        <option value="1">Open</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="2">Answered</option>
+                                        <option value="2">Jayarani</option>
+                                        <option value="2">On Hold</option>
+                                        <option value="2">Closed</option>
+                                        <option value="2">ETR Design</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline linehr">
+            <div class="row op-data">
+            <div class="col-md-12">
+                <div class="demo-html mt-0">
+                    <table class="example display dataTable display responsive nowrap tblalign table"
+                        style="width: 100%" aria-describedby="example_info">
+                        <thead class="theadrow">
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Subject
+                                </th>
+                                <th>
+                                    Tag
+                                </th>
+                                <th>
+                                    Department
+                                </th>
+                                <th>
+                                    Service
+                                </th>
+                                <th>
+                                    Contact
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Priority
+                                </th>
+                                <th>
+                                    Last Reply 
+                                </th>
+                                <th>
+                                    Created
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>No Entries Found</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- For Tab5 -->
+
+        <div id="Tab5" class="tabcontent" style="display: none;">
+            <div class="section3">
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="purchasegrp">
+                        <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5></br>
+                        <button type="submit" class="hrbtns contractbtn convert-fo" onclick="showModal('new_task_modal.html','Set Ticket Reminder')">NEW TASK</button>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-4 ">
+                        <div class="bxdiv fa-pull-right">
+                                <div class="purchasegrp">
+                                    <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                        <option value="1">Open</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="2">Answered</option>
+                                        <option value="2">Jayarani</option>
+                                        <option value="2">On Hold</option>
+                                        <option value="2">Closed</option>
+                                        <option value="2">ETR Design</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline">
+            <div class="row">
+            <div class="col-md-12">
+                <div class="demo-html mt-0">
+                    <table class="example display dataTable display responsive nowrap tblalign table"
+                        style="width: 100%" aria-describedby="example_info">
+                        <thead class="theadrow">
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    Name
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Start Date
+                                </th>
+                                <th>
+                                    Due Date
+                                </th>
+                                <th>
+                                    Assigned to
+                                </th>
+                                <th>
+                                    Tags
+                                </th>
+                                <th>
+                                    Priority
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">450</a></td>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">Cadullac xts Maintenance</a></br></br>
+                                    <span class="undelsp acceptsp">Recurring task</span></br></br>
+                                    <p class="header-effect">
+                                        <a href="#" class="start_timer" onclick="window.location.href = '';"> Start Timer</a>
+                                        <span class="black">|</span> <a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td><button type="button" id="stbutton" class=" status-button  dropdown-toggle dd-toggle"
+                                    data-bs-toggle="dropdown">In Progress</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Not Started</a></li>
+                                    <li><a class="dropdown-item" href="#">Testing</a></li>
+                                    <li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>
+                                    <li><a class="dropdown-item" href="#">Complete</a></li>
+                                </ul></td>
+                                <td class="text-danger">2023-09-05</td>
+                                <td>2023-09-16</td>
+                                <td><img src="../../assets/img/user.png" width="30" height="30" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"></td>
+                                <td></td>
+                                <td><button type="button" id="stbutton2" style="border: none;"
+                                    class=" status-button  dropdown-toggle range-toggle" data-bs-toggle="dropdown">Low </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="" href="#">Medium </a></li>
+                                    <li><a class="" href="#">High </a></li>
+                                    <li><a class="" href="#">Urgent </a></li>
+                                </ul></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">450</a></td>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">Cadullac xts Maintenance</a></br></br>
+                                    <span class="undelsp acceptsp">Recurring task</span></br></br>
+                                    <p class="header-effect">
+                                        <a href="#" class="start_timer" onclick="window.location.href = '';"> Start Timer</a>
+                                        <span class="black">|</span> <a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td><button type="button" id="stbutton" class=" status-button  dropdown-toggle dd-toggle"
+                                    data-bs-toggle="dropdown">In Progress</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Not Started</a></li>
+                                    <li><a class="dropdown-item" href="#">Testing</a></li>
+                                    <li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>
+                                    <li><a class="dropdown-item" href="#">Complete</a></li>
+                                </ul></td>
+                                <td class="text-danger">2023-09-05</td>
+                                <td>2023-09-16</td>
+                                <td><img src="../../assets/img/user.png" width="30" height="30" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"></td>
+                                <td></td>
+                                <td><button type="button" id="stbutton2" style="border: none;"
+                                    class=" status-button  dropdown-toggle range-toggle" data-bs-toggle="dropdown">Low </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="" href="#">Medium </a></li>
+                                    <li><a class="" href="#">High </a></li>
+                                    <li><a class="" href="#">Urgent </a></li>
+                                </ul></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">450</a></td>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">Cadullac xts Maintenance</a></br></br>
+                                    <span class="undelsp acceptsp">Recurring task</span></br></br>
+                                    <p class="header-effect">
+                                        <a href="#" class="start_timer" onclick="window.location.href = '';"> Start Timer</a>
+                                        <span class="black">|</span> <a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td><button type="button" id="stbutton" class=" status-button  dropdown-toggle dd-toggle"
+                                    data-bs-toggle="dropdown">In Progress</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Not Started</a></li>
+                                    <li><a class="dropdown-item" href="#">Testing</a></li>
+                                    <li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>
+                                    <li><a class="dropdown-item" href="#">Complete</a></li>
+                                </ul></td>
+                                <td class="text-danger">2023-09-05</td>
+                                <td>2023-09-16</td>
+                                <td><img src="../../assets/img/user.png" width="30" height="30" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"></td>
+                                <td></td>
+                                <td><button type="button" id="stbutton2" style="border: none;"
+                                    class=" status-button  dropdown-toggle range-toggle" data-bs-toggle="dropdown">Low </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="" href="#">Medium </a></li>
+                                    <li><a class="" href="#">High </a></li>
+                                    <li><a class="" href="#">Urgent </a></li>
+                                </ul></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">450</a></td>
+                                <td><a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')">Cadullac xts Maintenance</a></br></br>
+                                    <span class="undelsp acceptsp">Recurring task</span></br></br>
+                                    <p class="header-effect">
+                                        <a href="#" class="start_timer" onclick="window.location.href = '';"> Start Timer</a>
+                                        <span class="black">|</span> <a href="#" onclick="showModal('new_task_modal.html','Edit Cadillac xts maintenance')"> Edit</a>
+                                        <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                    </p>
+                                </td>
+                                <td><button type="button" id="stbutton" class=" status-button  dropdown-toggle dd-toggle"
+                                    data-bs-toggle="dropdown">In Progress</button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Not Started</a></li>
+                                    <li><a class="dropdown-item" href="#">Testing</a></li>
+                                    <li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>
+                                    <li><a class="dropdown-item" href="#">Complete</a></li>
+                                </ul></td>
+                                <td class="text-danger">2023-09-05</td>
+                                <td>2023-09-16</td>
+                                <td><img src="../../assets/img/user.png" width="30" height="30" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"></td>
+                                <td></td>
+                                <td><button type="button" id="stbutton2" style="border: none;"
+                                    class=" status-button  dropdown-toggle range-toggle" data-bs-toggle="dropdown">Low </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="" href="#">Medium </a></li>
+                                    <li><a class="" href="#">High </a></li>
+                                    <li><a class="" href="#">Urgent </a></li>
+                                </ul></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- For Tab 6 -->
+        <div id="Tab6" class="tabcontent" style="display: none;">
+            <div class="section3">
+                <div class="row">
+                    <div class="col-md-8">
+                    <div class="purchasegrp">
+                        <h5>#56 - test <button type="button" class="approvedbtn">In Progress</button></h5></br>
+                    </div>
+                    </div>
+                  
+                    <div class="col-md-4 ">
+                        <div class="bxdiv fa-pull-right">
+                                <div class="purchasegrp">
+                                    <select class="selectpicker form-control" data-live-search="true" title="In Progress">
+                                        <option value="1">Open</option>
+                                        <option value="2">In Progress</option>
+                                        <option value="2">Answered</option>
+                                        <option value="2">Jayarani</option>
+                                        <option value="2">On Hold</option>
+                                        <option value="2">Closed</option>
+                                        <option value="2">ETR Design</option>
+                                    </select>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="fileline linehr">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                                <div class="purchasegrp">
+                                    <label class="purchaseinfo"> Subject</label>
+                                    <input type="text" class="form-control purchaseselects">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                        <div class="purchasegrp">
+                            <label for="tags" class="purchaseinfo mb-1">Contact</label>
+                            <select class="selectpicker form-control" data-live-search="true" title="None selected">
+                                <option value="0" data-subtext="james">james james</option>
+                                <option value="1">Start typing to search</option>
+                            </select>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                                <div class="purchasegrp">
+                                    <label for="purname" class="purchaseinfo">Name</label>
+                                    <input type="text" class="form-control purchaseselects"
+                                        disabled>
+                                </div>
+                            </div>
+                        <div class="col-md-6">
+                                <div class="purchasegrp">
+                                    <label for="purname" class="purchaseinfo">Email address</label>
+                                    <input type="text" id="purname" class="form-control purchaseselect"
+                                        disabled>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                                <div class="purchasegrp">
+                                    <label for="unitname" class="purchaseinfo">Department</label>
+                                    <select name="dept" class="selectpicker form-control" data-live-search="true" title="None selected">
+                                        <option value="0"></option>
+                                        <option value="1">Sales</option>
+                                        <option value="2">Management</option>
+                                        <option value="3">Professional Services</option>
+                                        <option value="4">okan</option>
+                                        <option value="5">sale</option>
+                                        <option value="6">Ecommerce</option>
+                                        <option value="7">Purchase</option>
+                                        <option value="8">Senior Team Leader</option>
+                                    </select>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+      
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="purchasegrp">
+                                <label for="tags" class="purchaseinfo mb-1"><i class="fa fa-tag"></i>Tags</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p class="text-muted"><span>| </span> Tags</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="purchasegrp">
+                                <label for="unitname" class="purchaseinfo mb-1">Assign ticket (defautl is current
+                                    user)</label>
+                                <select class="selectpicker form-control" data-live-search="true" title="GTS Solutions">
+                                    <option value="0">Note</option>
+                                    <option value="1">Yorrrr Karrr</option>
+                                    <option value="2">testaa testiii</option>
+                                    <option value="3">test system</option>
+                                    <option value="4">SSS SSS</option>
+                                    <option value="5">sss sss</option>
+                                    <option value="6">oui oui</option>
+                                    <option value="7">mohammed jumaa</option>
+                                    <option value="8">Indi Diwali</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                    <div class="purchasegrp">
+                                        <label for="unitname" class="purchaseinfo mb-1">Priority</label>
+                                        <select class="selectpicker" data-live-search="true" title="Medium">
+                                            <option value="0">Low</option>
+                                            <option value="1">Medium</option>
+                                            <option value="2">High</option>
+                                            <option value="3">Urgent</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            <div class="col-md-6">
+                                <div class="purchasegrp">
+                                    <label for="group" class="purchaseinfo mb-1">Service</label>
+                                    <div class=" dropdown-with-icon dropdownalignment" style="border-radius:4px 0px 0px 4px;">
+                                        <select name="group" class="form-control selectpicker " data-live-search="true">
+                                            <option value="">aaa</option>
+                                            <option value="0">Activation</option>
+                                            <option value="1">Clarke</option>
+                                            <option value="2">Collection</option>
+                                            <option>Corporate</option>
+                                            <option>Payment</option>
+                                            <option>sdsd</option>
+                                        </select>
+                                        <button type="button" class="select-container dropdownplusbtn">
+                                            <span class="input-group-addon colorlabels" onclick="showModal('new_service.html','New Service')"><i class="bi bi-plus-lg plus-blue"></i></span>
+                                        </button>
+                                    </div>
+                                </div>
+                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <div class="purchasegrp">
+                                        <label for="unitname" class="purchaseinfo mb-1">Project</label>
+                                        <select class="selectpicker" data-live-search="true" title="Medium">
+                                            <option value="0" class="bg-light">Start typing to search</option>
+                                        </select>
+                                    </div>
+                                </div>
+                         </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 blkftr">
+                    <div class="modal-footer taskfooter">
+                        <button type="submit" class="tasksave1">SAVE</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+    </section>
+    <section class="bg-white section1">
+        <div class="tblcontainer1">
+            <div class="row">
+                            <div class="col-md-3 border-end">
+                                <a href="#" onclick="window.location.href = '#';">GTS Sollution</a><br>
+                                <p class="text-muted">Staff</p>
+                                <hr class="fileline">
+                                <button type="submit" class="hrbtns hrchartsbtn convert-fo" onclick="showModal('new_task_modal.html','Add New Task')">CONVERT TO TASK</button>
+                            </div>
+                            <div class="col-md-9">
+                                        <a href="#" onclick="showModal('print.html','Edit')"><i class="fa fa-pencil-square-o fa-pull-right"></i></a>
+                            </div>
+            </div>
+            <hr class="fileline">
+            <div class="row">
+                <div class="col-md-12">
+                        <p>Posted: 2023-06-18 21:13:39</p>
+                </div>
+            </div>
+    </section>
+    <section class="bg-white section1">
+        <div class="tblcontainer1">
+            <div class="row">
+                            <div class="col-md-3 border-end">
+                                <a href="#" onclick="window.location.href = '#';">GTS Sollution</a><br>
+                                <p class="text-muted">Staff</p>
+                                <hr class="fileline">
+                                <button type="submit" class="dangerclr convert-fo"> DELETE REPLY</button>
+                            </br>
+                            </br>
+                                <button type="submit" class="hrbtns hrchartsbtn convert-fo" onclick="showModal('new_task_modal.html','Add New Task')">CONVERT TO TASK</button>
+                            </div>
+                            <div class="col-md-8">
+                            <p>XX</p>
+                            </div>
+                            <div class="col-md-1">
+                                        <a href="#" onclick="showModal('print.html','Edit')"><i class="fa fa-pencil-square-o fa-pull-right"></i></a>
+                                        <a href="#" onclick="print_ticket_message(42,'ticket'); return false;"><i class="fa fa-print fa-pull-right"></i></a>
+                            </div>
+            </div>
+            <hr class="fileline">
+            <div class="row">
+                <div class="col-md-12">
+                        <p>Posted: 2023-06-18 21:13:39</p>
+                </div>
+            </div>
+    </section>
+</div>
+<div class="row">
+    <div class="col-md-12 blkftr">
+        <div class="modal-footer taskfooter text-end bg-white fixed-bottom section6">
+            <button type="submit" class="tasksave1">ADD RESPONSE</button>
+        </div>
+    </div>
+</div>
+
+    <!---Modal---->
+    <div class="modal fade" id="modal_md" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- modal -->
+<script>
+    function showModal(url, title) {
+        $('#modal_md').on('shown.bs.modal', function () {
+            $('.selectpicker').selectpicker('refresh');
+        });
+        $('#modal_md').modal('show', { backdrop: 'true' });
+        $.ajax({
+            url: url,
+            success: function (response) {
+                $('#modal_md .modal-title').html(title);
+                $('#modal_md .modal-body').html(response);
+            }
+        });
+    }
+</script>
+<!--tooltip-->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+  </script>
+ <script>
+        $(document).ready(function () {
+            var table = $('.example').DataTable({
+                language: { lengthMenu: '_MENU_' },
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true,
+                dom: 'Blfrtip',
+                buttons: [
+                    {
+                        text: 'EXPORT',
+                        extend: 'collection',
+                        buttons: ['excel', 'csv', 'pdf', 'print'],
+                        className: 'px-3'
+                    },
+                    {
+                        text: '<i class="bi bi-arrow-repeat p-1" style="font-size:12px"></i>'
+                    }
+                ]
+            });
+        });
+    </script>
+
+    <!-- summernote -->
+    <script>
+        $('#summernote').summernote({
+            placeholder: '',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+        <!-- summernote -->
+        <script>
+            $('#summernote').summernote({
+                placeholder: '',
+                tabsize: 2,
+                height: 100
+            });
+        </script>
+            <!-- summernote -->
+    <script>
+        $('#summernote').summernote({
+            placeholder: '',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+<script>
+    $(document).ready(function () {
+        $("#add_btn1").click(function () {
+            $("#parent1").append('<div id="coldiv" class="col-md-4"></div><div class="col-md-4"></div><div class="col-md-4"><div class="chseexc"><label for="" class="purchaseinfo mb-1">Attachment</label><div class="input-group d-flex flex-nowrap"><input type="file" class="file_in"><span class="input-group-addon"><button id="remove_btn" type="button" class="ctctredbtn ctctgrnbtn"><i class="fa fa-minus"></i></button></span></div></div></div><div class="col-md-4"></div>');
+        });
+        $(document).on('click', '#remove_btn', function () {
+            $(this).closest('#coldiv').remove();
+        });
+    });
+</script>
+
+    <script>
+        $(document).ready(function () {
+            $("#add_btn").click(function () {
+                $("#parent").append('<div id="coldiv" class="col-md-6"><div class="purchasegrp"><label for="" class="purchaseinfo mb-2">Attachment</label><div class="input-group d-flex flex-nowrap"><input type="file" class="file_in"><span class="input-group-addon"><button id="remove_btn" type="button" class="ctctredbtn ctctgrnbtn"><i class="fa fa-minus"></i></button></span></div></div></div>');
+            });
+            $(document).on('click', '#remove_btn', function () {
+                $(this).closest('#coldiv').remove();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#add_btn1").click(function () {
+                $("#parent1").append('<div id="coldiv" class="col-md-12"><div class="chseexc"><label for="" class="purchaseinfo mb-1">Attachment</label><div class="input-group d-flex flex-nowrap"><input type="file" class="file_in"><span class="input-group-addon"><button id="remove_btn" type="button" class="ctctredbtn ctctgrnbtn"><i class="fa fa-minus"></i></button></span></div></div></div>');
+            });
+            $(document).on('click', '#remove_btn', function () {
+                $(this).closest('#coldiv').remove();
+            });
+        });
+    </script>
+        <!--Multiselect-->
+        <script>
+            const dropdowns = document.querySelectorAll('.multiselect');
+    
+            dropdowns.forEach(dropdown => {
+                const inputBox = document.createElement('input');
+                inputBox.type = 'hidden';
+                inputBox.classList.add('selected-values');
+                name = dropdown.getAttribute('data-name');
+                inputBox.setAttribute("name", name);
+                dropdown.after(inputBox);
+    
+                dropdown.addEventListener('change', () => {
+                    const selectedOptions = Array.from(dropdown.selectedOptions).map(option => option.value);
+                    inputBox.value = selectedOptions.join(', ');
+                });
+            });
+        </script>
+
+
+    <script>
+        function opentab1(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        var carousel = document.getElementById("carouselExampleIndicators");
+
+        carousel.addEventListener("slid.bs.carousel", function (event) {
+            var activeSlideIndex = event.to;
+            if (activeSlideIndex === 0) {
+
+                opentab1(event, 'Tab1');
+
+            }
+            else if (activeSlideIndex === 1) {
+
+                opentab1(event, 'Tab2');
+
+            }
+            else if (activeSlideIndex === 2) {
+
+                opentab1(event, 'Tab3');
+
+            }
+            else if (activeSlideIndex === 3) {
+
+                opentab1(event, 'Tab4');
+
+            }
+            else if (activeSlideIndex === 4) {
+
+                opentab1(event, 'Tab5');
+
+            }
+            else if (activeSlideIndex === 5) {
+
+                opentab1(event, 'Tab6');
+
+            }
+        });
+    </script>
+
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        function Export() {
+            html2canvas(document.getElementById('example'), {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("Table.pdf");
+                }
+            });
+        }
+    </script>
+
+        <!-- table dropdown -->
+        <script>
+            var dropdownToggles = document.querySelectorAll("#stbutton");
+    
+            dropdownToggles.forEach(function (dropdownToggle) {
+                var dropdownMenu = dropdownToggle.nextElementSibling;
+    
+                dropdownMenu.addEventListener("click", function (event) {
+                    var selectedOption = event.target.textContent;
+    
+                    dropdownToggle.textContent = selectedOption;
+    
+                    dropdownToggle.classList.remove("await", "testing", "notselected", "complete");
+                    if (selectedOption === "Not Started") {
+                        dropdownToggle.classList.add("notselected");
+                    } else if (selectedOption === "Awaiting Feedback") {
+                        dropdownToggle.classList.add("await");
+                    } else if (selectedOption === "Testing") {
+                        dropdownToggle.classList.add("testing");
+                    } else if (selectedOption === "Complete") {
+                        dropdownToggle.classList.add("complete");
+                    } else {
+                        dropdownToggle.classList.remove("await", "testing", "notselected", "complete");
+                    }
+                });
+                dropdownToggle.addEventListener("click", function () {
+                    var selectedOption = dropdownToggle.textContent.trim();
+                    dropdownMenu.innerHTML = "";
+                    if (selectedOption === "In Progress") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Not Started</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Testing</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Complete</a></li>';
+                    } else if (selectedOption === "Not Started") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">In Progress</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Testing</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Complete</a></li>';
+                    } else if (selectedOption === "Testing") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">In Progress</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Not Started</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Complete</a></li>';
+                    } else if (selectedOption === "Awaiting Feedback") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">In Progress</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Not Started</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Testing</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Complete</a></li>';
+                    } else if (selectedOption === "Complete") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">In Progress</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Not Started</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Awaiting Feedback</a></li>';
+                    }
+                });
+            });
+        </script>
+        <script>
+            function changeButton() {
+                const selectBox = document.getElementById("statusSelect");
+                const selectedOption = selectBox.options[selectBox.selectedIndex];
+                const button = document.getElementById("statusButton");
+                // Update button text
+                button.innerText = selectedOption.text;
+                // Reset border and text colors
+                button.style.border = "";
+                button.style.color = "";
+                // Apply specific styles based on selected option value
+                if (selectedOption.value === "Testing") {
+                    button.style.border = "2px solid black";
+                    button.style.color = "black";
+                } else if (selectedOption.value === "Awaiting Feedback") {
+                    button.style.border = "2px solid green";
+                    button.style.color = "green";
+                } else if (selectedOption.value === "Complete") {
+                    button.style.border = "2px solid red";
+                    button.style.color = "red";
+                }
+            }
+        </script>
+        <script>
+            var dropdownToggles = document.querySelectorAll("#stbutton2");
+            dropdownToggles.forEach(function (dropdownToggle) {
+                var dropdownMenu = dropdownToggle.nextElementSibling;
+                dropdownMenu.addEventListener("click", function (event) {
+                    var selectedOption = event.target.textContent;
+                    dropdownToggle.textContent = selectedOption;
+                    dropdownToggle.classList.remove("medium", "hard", "urgent");
+                    if (selectedOption === "Medium") {
+                        dropdownToggle.classList.add("medium");
+                    } else if (selectedOption === "Hard") {
+                        dropdownToggle.classList.add("hard");
+                    } else if (selectedOption === "Urgent") {
+                        dropdownToggle.classList.add("urgent");
+                    } else {
+                        dropdownToggle.classList.remove("medium", "hard", "urgent");
+                    }
+                });
+                dropdownToggle.addEventListener("click", function () {
+                    var selectedOption = dropdownToggle.textContent.trim();
+                    dropdownMenu.innerHTML = "";
+                    if (selectedOption === "Low") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Medium</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Hard</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Urgent</a></li>';
+                    } else if (selectedOption === "Medium") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Low</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Hard</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Urgent</a></li>';
+                    } else if (selectedOption === "Hard") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Low</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Medium</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Urgent</a></li>';
+                    } else if (selectedOption === "Urgent") {
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Low</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Medium</a></li>';
+                        dropdownMenu.innerHTML += '<li><a class="dropdown-item" href="#">Hard</a></li>';
+                    }
+                });
+            });
+        </script>
+</body>
+
+</html>

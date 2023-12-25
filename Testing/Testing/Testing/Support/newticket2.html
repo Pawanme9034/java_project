@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM</title>
+    <!--Bootstrap 5 CSS--->
+    <link rel="stylesheet" type="text/css" href="./assets/Bootstrap5/css/bootstrap.css">
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="./assets/datatables/css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/datatables/css/buttons.dataTables.min.css">
+
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="./assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
+
+
+    <!--Bootstrap Dropdown Js--->
+    <script type="text/javascript" src="./assets/Bootstrap5/js/popper.min.js"></script>
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="./assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="./assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+    <script type="text/javascript" src="./assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="./assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="./assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="./assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="./assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="./assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="./assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="./assets/Bootstrap5/css/bootstrap-select.min.css">
+    <script src="./assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!--Main css-->
+    <link rel="stylesheet" href="./assets/css/tasksmry_rj.css">
+    <!-- Edit table Link -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+
+    <style>
+        .help-block {
+            margin-left: 10px;
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="estimate-container ">
+
+        <form action="" id="form">
+            <div class="tblcontainer1 p-2">
+
+                <div class="container-fluid top-column mb-3">
+
+
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a class="ticket_no_contact mb-2" href="newticket.html">
+                                        <button type="button" class="draftsp undelsp m-0"><i
+                                                class="fa fa-user pr-2"></i><span></span>
+                                            Ticket
+                                            to contact</button></a>
+
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label class="purchaseinfo mb-2"> Subject</label>
+                                            <input type="text" name="subject" class="form-control purchaseselects m-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label for="purname" class="purchaseinfo mb-2">Name</label>
+                                            <input type="text" id="purname" class="form-control purchaseselect m-0"
+                                                >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label for="purname" class="purchaseinfo mb-2">Email address</label>
+                                            <input type="text" id="purname" class="form-control purchaseselect m-0"
+                                                >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label for="unitname" class="purchaseinfo mb-2">Department</label>
+                                            <select name="dept" class="selectpicker" data-live-search="true">
+                                                <option value="0"></option>
+                                                <option value="1">Hyderabad</option>
+                                                <option value="2">Vizag</option>
+                                                <option value="3">Kochi</option>
+                                                <option value="4">Assigned</option>
+                                                <option value="5">Dharmavaram</option>
+                                                <option value="6">Bengaluru</option>
+                                                <option value="7">Lucknow</option>
+                                                <option value="8">Madurai</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label for="purname" class="purchaseinfo mb-2">CC</label>
+                                            <input type="text" id="purname" class="form-control purchaseselect m-0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="margin1">
+                                <div class="purchasegrps m-0">
+                                    <label for="tags" class="purchaseinfo mb-2"><i class="fa fa-tag"></i>Tags</label>
+                                    <select class="selectpicker" data-live-search="true">
+                                        <option value="0"></option>
+                                        <option value="1">Hyderabad</option>
+                                        <option value="2">Vizag</option>
+                                        <option value="3">Kochi</option>
+                                        <option value="4">Assigned</option>
+                                        <option value="5">Dharmavaram</option>
+                                        <option value="6">Bengaluru</option>
+                                        <option value="7">Lucknow</option>
+                                        <option value="8">Madurai</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="margin1">
+                                <div class="purchasegrps m-0">
+                                    <label for="unitname" class="purchaseinfo mb-2">Assign ticket (defautl is current
+                                        user)</label>
+                                    <select class="selectpicker" data-live-search="true">
+                                        <option value="0"></option>
+                                        <option value="1">Hyderabad</option>
+                                        <option value="2">Vizag</option>
+                                        <option value="3">Kochi</option>
+                                        <option value="4">Assigned</option>
+                                        <option value="5">Dharmavaram</option>
+                                        <option value="6">Bengaluru</option>
+                                        <option value="7">Lucknow</option>
+                                        <option value="8">Madurai</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="margin1">
+                                        <div class="purchasegrps m-0">
+                                            <label for="unitname" class="purchaseinfo mb-2">Priority
+                                            </label>
+                                            <select class="selectpicker" data-live-search="true">
+                                                <option value="0"></option>
+                                                <option value="1">Hyderabad</option>
+                                                <option value="2">Vizag</option>
+                                                <option value="3">Kochi</option>
+                                                <option value="4">Assigned</option>
+                                                <option value="5">Dharmavaram</option>
+                                                <option value="6">Bengaluru</option>
+                                                <option value="7">Lucknow</option>
+                                                <option value="8">Madurai</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="margin1 input-group w-100">
+                                        <div class="purchasegrps m-0 w-100">
+                                            <label for="unitname" class="purchaseinfo mb-2">Service
+                                            </label>
+                                            <div class=" dropdown-with-icon dropdownalignment"
+                                                style="border-radius:4px 0px 0px 4px;">
+                                                <select class="selectpicker" data-live-search="true">
+                                                    <option value="0"></option>
+                                                    <option value="1">Hyderabad</option>
+                                                    <option value="2">Vizag</option>
+                                                    <option value="3">Kochi</option>
+                                                    <option value="4">Assigned</option>
+                                                    <option value="5">Dharmavaram</option>
+                                                    <option value="6">Bengaluru</option>
+                                                    <option value="7">Lucknow</option>
+                                                    <option value="8">Madurai</option>
+                                                </select>
+                                                <button class="select-container dropdownplusbtn"
+                                                onclick="showMdModal('./modals/new_service.html','New Service')" style="height:36px">
+
+                                                    <span class="input-group-addon colorlabels"><i
+                                                            class="bi bi-plus-lg plus-blue"></i></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <div class="margin1">
+                                <a href=""><i class="fa fa-pencil-square-o"></i><br></a>
+                                <label for="unitname" class="layoffcollab"><span class="aster pe-1">*</span>Pruebas
+                                    de
+                                    textos</label>
+                                <div class="purchasegrps m-0">
+                                    <input class="form-check-input me-1" name="choice" type="checkbox" value=""
+                                        id="flexCheckDefault2">
+                                    <label class="form-check-label me-1" for="flexCheckDefault2">
+                                        Option1
+                                    </label>
+                                    <input class="form-check-input me-1" name="choice" type="checkbox" value=""
+                                        id="flexCheckDefault2">
+                                    <label class="form-check-label me-1" for="flexCheckDefault2">
+                                        Option2
+                                    </label>
+                                    <input class="form-check-input me-1" name="choice" type="checkbox" value=""
+                                        id="flexCheckDefault2">
+                                    <label class="form-check-label" for="flexCheckDefault2">
+                                        Option3
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="margin1">
+                                <a href=""><i class="fa fa-pencil-square-o"></i></a>
+                                <div class="purchasegrps m-0">
+                                    <label for="unitname" class="layoffcollab pb-2"><span
+                                            class="aster pe-1">*</span>Fecha
+                                        tentativa de
+                                        entrega</label>
+                                    <div class="layoffinp">
+                                        <input type="date" name="date" class="form-control datelayoff">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tblcontainer1 p-2 pt-3">
+                <div class="container-fluid mb-3 middle-part">
+                    <div>
+                        <h5>Ticket body</h5>
+
+                        <hr class="fileline">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="margin1">
+                                    <div class="purchasegrp">
+                                        <label for="tags" class="purchaseinfo"></label>
+                                        <select class="selectpicker" data-live-search="true">
+                                            <option value="0"></option>
+                                            <option value="1">Hyderabad</option>
+                                            <option value="2">Vizag</option>
+                                            <option value="3">Kochi</option>
+                                            <option value="4">Assigned</option>
+                                            <option value="5">Dharmavaram</option>
+                                            <option value="6">Bengaluru</option>
+                                            <option value="7">Lucknow</option>
+                                            <option value="8">Madurai</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="margin1">
+                                    <div class="purchasegrp">
+                                        <label for="tags" class="purchaseinfo"></label>
+                                        <select class="selectpicker" data-live-search="true">
+                                            <option value="0"></option>
+                                            <option value="1">Hyderabad</option>
+                                            <option value="2">Vizag</option>
+                                            <option value="3">Kochi</option>
+                                            <option value="4">Assigned</option>
+                                            <option value="5">Dharmavaram</option>
+                                            <option value="6">Bengaluru</option>
+                                            <option value="7">Lucknow</option>
+                                            <option value="8">Madurai</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="summernote"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="fileline">
+
+
+
+                    <div id="parent" class="row">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="purchasegrp">
+                                <label for="" class="purchaseinfo mb-2">Attachment</label>
+                                <div class="input-group d-flex flex-nowrap">
+                                    <input type="file" class="file_in">
+                                    <span class="input-group-addon">
+                                        <button id="add_btn" type="button" class="ctctgrnbtn"><i
+                                                class="fa fa-plus"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="fileline">
+
+                    <div class="text-end taskfooter">
+                        <button type="submit" class="tasksave1">OPEN TICKET</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+
+    </section>
+
+
+    <!---Modal---->
+
+    <div class="modal fade" id="modal_md" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title"></h5>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer taskfooter pb-4">
+                    <button type="button" class="taskclose1"
+                        data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="tasksave1">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        function showMdModal(url, title) {
+            $('#modal_md').modal('show', { backdrop: 'true' });
+            $.ajax({
+                url: url,
+                success: function (response) {
+                    $('#modal_md .modal-title').html(title);
+                    $('#modal_md .modal-body').html(response);
+                }
+            });
+        }
+    </script>
+
+
+
+    <script>
+        function openTab(evt, tabName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+            // Initialize select2
+            $(".selectpicker").select2();
+            $(".selectpicker").select2("val", "4");
+            $('.selectpicker option:selected').text('Vizag');
+            // Read selected option
+            $('#but_read').click(function () {
+                var username = $('.selectpicker option:selected').text();
+                var userid = $('.selectpicker').val();
+
+                $('#result').text("id : " + userid + ", name : " + username);
+            });
+        });</script>
+
+
+    <script>
+        $(document).ready(function () {
+
+
+            var table = $('#example').DataTable({
+
+                rowReorder: {
+                    selector: 'td:nth-child(2)'
+                },
+                responsive: true,
+                dom: 'Bfltip',
+                buttons: [
+                    {
+                        text: '<button class="exportbtn">Export</button>',
+                        split: ['excel', 'csv', 'pdf', 'print']
+                    },
+                    {
+                        text: '<div style="font-size:12px;">Manipulation</div>'
+                    },
+                    {
+                        text: '<i class="bi bi-arrow-repeat" style="font-size:12px"></i>'
+                    }
+                ]
+
+            });
+            table.columns.adjust().draw();
+            table.column(0).nodes().each(function (cell, i) {
+                cell.innerHTML = '<input type="checkbox" class="checkbox" >';
+            });
+            $(document).on('click', 'input[type="checkbox"]', function () {
+                // Reference the checkbox that was clicked
+                var checkbox = $(this);
+
+                // Find the nearest parent row of the checkbox
+                var row = checkbox.closest('tr');
+
+                // Toggle a class on the row based on the checkbox's checked state
+                // if (checkbox.is(':checked')) {
+                //     row.addClass('selected');
+                // } else {
+                //     row.removeClass('selected');
+                // }
+            });
+        });
+    </script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        function Export() {
+            html2canvas(document.getElementById('example'), {
+                onrendered: function (canvas) {
+                    var data = canvas.toDataURL();
+                    var docDefinition = {
+                        content: [{
+                            image: data,
+                            width: 500
+                        }]
+                    };
+                    pdfMake.createPdf(docDefinition).download("Table.pdf");
+                }
+            });
+        }
+    </script>
+    <!-- edit table -->
+    <script>
+        $(document).ready(function () {
+            $("#add_btn").click(function () {
+                $("#parent").append('<div id="coldiv" class="col-md-6"><div class="purchasegrp"><label for="" class="purchaseinfo mb-2">Attachment</label><div class="input-group d-flex flex-nowrap"><input type="file" class="file_in"><span class="input-group-addon"><button id="remove_btn" type="button" class="ctctredbtn ctctgrnbtn"><i class="fa fa-minus"></i></button></span></div></div></div>');
+            });
+            $(document).on('click', '#remove_btn', function () {
+                $(this).closest('#coldiv').remove();
+            });
+        });
+    </script>
+
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 5',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+
+
+    <!--Multiselect-->
+    <script>
+        const dropdowns = document.querySelectorAll('.multiselect');
+
+        dropdowns.forEach(dropdown => {
+            const inputBox = document.createElement('input');
+            inputBox.type = 'hidden';
+            inputBox.classList.add('selected-values');
+            name = dropdown.getAttribute('data-name');
+            inputBox.setAttribute("name", name);
+            dropdown.after(inputBox);
+
+            dropdown.addEventListener('change', () => {
+                const selectedOptions = Array.from(dropdown.selectedOptions).map(option => option.value);
+                inputBox.value = selectedOptions.join(', ');
+            });
+        });
+    </script>
+
+    <script>
+        $('#form').formValidation({
+            framework: 'bootstrap',
+            fields: {
+                date: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required.'
+                        }
+                    }
+                },
+                contact: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required.'
+                        }
+                    }
+                },
+                dept: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required.'
+                        }
+                    }
+                },
+                subject: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required.'
+                        }
+                    }
+                },
+            }
+        })
+
+    </script>
+</body>
+
+</html>

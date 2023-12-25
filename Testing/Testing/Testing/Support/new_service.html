@@ -1,0 +1,39 @@
+<form action="" id="addlead2">
+
+    <div class="row">
+        <div class="col-md-12">
+            <label for="purname" class="purchaseinfo"><span class="text-danger">*</span> Service Name</label>
+            <input type="text" id="purname" name="PayAcc" class="form-control purchaseselect">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 blkftr">
+            <div class="modal-footer taskfooter">
+                <button type="button" class="taskclose1" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="tasksave1">Save</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<script>
+    $('#addlead2').formValidation({
+        framework: 'bootstrap',
+        fields: {
+
+
+            PayAcc: {
+                validators: {
+                    notEmpty: {
+                        message: 'This feild is required'
+                    }
+                }
+            },
+
+
+        }
+    })
+
+</script>

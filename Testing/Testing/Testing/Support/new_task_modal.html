@@ -1,0 +1,280 @@
+<form id="new-task" action="">
+
+<div class="containerbox">
+    <div id="accordion">
+        <div class="row">
+            <div class="col-lg-2">
+                <div class="purchasegrp">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox">
+                        <label data-bs-toggle="tooltip" data-bs-title="If you set this task to public will be visible for all staff members. Otherwise will be only visible to members who are assignees,followers,creator or administrators">Public
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <div class="purchasegrp">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <label>Billable
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+            </div>
+            <div class="col-lg-2 text-end">
+                <button class="acc-btn" role="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"><span
+                        class="text-primary">Attach
+                        Files</span></button>
+            </div>
+            <hr class="fileline">
+            <div id="collapseThree" class="collapse collapse-content"
+                data-parent="#accordion">
+                <div class="row">
+                    <div id="parent1" class="row">
+                        <div class="col-md-12">
+                            <div class="chseexc ">
+                                <label for="" class="purchaseinfo mb-1">Attachment</label>
+                                <div class="input-group d-flex flex-nowrap">
+                                    <input type="file" class="file_in">
+                                    <span class="input-group-addon">
+                                        <button id="add_btn1" type="button" class="ctctgrnbtn"><i class="fa fa-plus"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <hr class="fileline">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchaseinfo"><span class=" aster">* </span> Subject</label>
+                <input type="text" class="form-control purchaseselects" name="sname">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label class="purchaseinfo">Hourly Rate
+                </label>
+                <input type="number" class="form-control purchaseselects">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label class="purchaseinfo"><span class=" aster">* </span>Start Date</label>
+                <input type="date" class="form-control purchaseselects " name="sname">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label class="purchaseinfo">Due Date</label>
+                <input type="date" class="form-control purchaseselects ">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Priority</label>
+                <select class="selectpicker form-control" name="currency" title="Medium">
+                    <option value="36">Low</option>
+                    <option value="38">Medium</option>
+                    <option value="41">High</option>
+                    <option value="41">Urgent</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Repeat Every</label>
+                <select class="selectpicker form-control" name="currency" title="None selected">
+                    <option value="36">week</option>
+                    <option value="38">2 week</option>
+                    <option value="41">1 month</option>
+                    <option>2 month</option>
+                    <option>3 month</option>
+                    <option>6 month</option>
+                    <option>1 year</option>
+                    <option>Custom</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Related to</label>
+                <select class="selectpicker form-control" name="currency" title="Ticket">
+                    <option value="36">Project</option>
+                    <option value="38">Invoice</option>
+                    <option value="41">Customer</option>
+                    <option value="41">Estimate</option>
+                    <option value="41">Lead</option>
+                    <option value="41">Proposal</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Ticket</label>
+                <select class="selectpicker form-control" name="currency" data-live-search="true" title="#62-test">
+                    <option value="36" class="bg-light">Start typing to search</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Assignees</label>
+                <select class="selectpicker form-control" name="currency" title="GTS Solution">
+                    <option value="0">Note</option>
+                    <option value="1">Yorrrr Karrr</option>
+                    <option value="2">testaa testiii</option>
+                    <option value="3">test system</option>
+                    <option value="4">SSS SSS</option>
+                    <option value="5">sss sss</option>
+                    <option value="6">oui oui</option>
+                    <option value="7">mohammed jumaa</option>
+                    <option value="8">Indi Diwali</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="purchasegrp">
+                <label for="tags" class="purchaseinfo mb-1">Followers</label>
+                <select class="selectpicker form-control" name="currency" title="None selected">
+                    <option value="0">Note</option>
+                    <option value="1">Yorrrr Karrr</option>
+                    <option value="2">testaa testiii</option>
+                    <option value="3">test system</option>
+                    <option value="4">SSS SSS</option>
+                    <option value="5">sss sss</option>
+                    <option value="6">oui oui</option>
+                    <option value="7">mohammed jumaa</option>
+                    <option value="8">Indi Diwali</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label for="unitname" class="purchaseinfo mb-1">Insert Checklist Templates</label>
+                    <select class="selectpicker multiselect" data-name="name"  multiple  data-actions-box="true" data-live-search="true" title="None selected" data-bs-toggle="tooltip" data-bs-title="None selected">
+                            <option value="1">mangrooved cleared</option>
+                            <option value="2">mmm</option>
+                            <option value="3">PLANTA</option>
+                            <option value="4">test</option>
+                   </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp tags">
+                <label for="tags" class="purchaseinfo mb-1">Tags</label>
+                <i class="fa fa-tag"></i>
+                <select class="selectpicker form-control" multiple aria-placeholder="Tags" title="Tags">
+                    <option value="0">Set File</option>
+                    <option value="1">Upload Article</option>
+                    <option value="2">Wewer</option>
+                    <option value="3">Mangrove</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr class="fileline">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrps">
+                <label class="emailpro ">Task Description</label>
+                <textarea class="textdesc  " rows="4"></textarea>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div class="row">
+    <div class="col-md-12 blkftr">
+        <div class="modal-footer taskfooter">
+            <button type="button" class="taskclose1" data-bs-dismiss="modal">
+                CLOSE
+            </button>
+            <button type="submit" class="tasksave1">SAVE</button>
+        </div>
+    </div>
+</div>
+</form>
+    <!-- summernote -->
+    <script>
+        $('#summernote').summernote({
+            placeholder: '',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+    <!--tooltip-->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+  </script>
+<script>
+    $('#new-task').formValidation({
+        framework: 'bootstrap',
+        fields: {
+
+
+            sname: {
+                validators: {
+                    notEmpty: {
+                        message: 'This feild is required'
+                    }
+                }
+            },
+
+
+        }
+    })
+
+</script>
+<script>
+    $(document).ready(function () {
+        $("#add_btn1").click(function () {
+            $("#parent1").append('<div id="coldiv" class="col-md-12"><div class="chseexc"><label for="" class="purchaseinfo mb-1">Attachment</label><div class="input-group d-flex flex-nowrap"><input type="file" class="file_in"><span class="input-group-addon"><button id="remove_btn" type="button" class="ctctredbtn ctctgrnbtn"><i class="fa fa-minus"></i></button></span></div></div></div>');
+        });
+        $(document).on('click', '#remove_btn', function () {
+            $(this).closest('#coldiv').remove();
+        });
+    });
+</script>
+    <!--Multiselect-->
+    <script>
+        const dropdowns = document.querySelectorAll('.multiselect');
+
+        dropdowns.forEach(dropdown => {
+            const inputBox = document.createElement('input');
+            inputBox.type = 'hidden';
+            inputBox.classList.add('selected-values');
+            name = dropdown.getAttribute('data-name');
+            inputBox.setAttribute("name", name);
+            dropdown.after(inputBox);
+
+            dropdown.addEventListener('change', () => {
+                const selectedOptions = Array.from(dropdown.selectedOptions).map(option => option.value);
+                inputBox.value = selectedOptions.join(', ');
+            });
+        });
+    </script>

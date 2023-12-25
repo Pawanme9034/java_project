@@ -1,0 +1,95 @@
+<form action="" id="remainder-form">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label for="creationdate" class="purchaseinfo"><span class="aster">* </span> Date to be
+                    notified</label>
+                <input type="date" name="date" name="date" class="form-control purchaseselects m-0">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label for="personcharge" class="purchaseinfo mb-1"><span class="aster">* </span> Set Remainder
+                    To</label>
+                <select class="selectpicker" id="groups" name="groups" data-live-search="true">
+                    <option value="0">GTS Solution</option>
+                    <option value="1">Shasi Kumar</option>
+                    <option value="2">Salsa Billa</option>
+                    <option value="3">John</option>
+                    <option>oui oui</option>
+                    <option>mohammed jumaa</option>
+                    <option>Indi diwali</option>
+                    <option value="4">None Selected</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <label for="creationdate" class="purchaseinfo"><span class="aster">* </span>
+                    Description</label>
+                <textarea name="description" name="desc" class=" textdesc"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row pb-2">
+        <div class="col-md-12">
+            <div class="purchasegrp">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">Send
+                        also an email for this
+                        reminder
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 blkftr">
+            <div class="modal-footer taskfooter">
+                <button type="button" class="taskclose1" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="tasksave1">Save</button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+    $('#remainder-form').formValidation({
+        framework: 'bootstrap',
+        fields: {
+            date: {
+                validators: {
+                    notEmpty: {
+                        message: 'This field is required.'
+                    }
+                }
+            },
+
+            desc: {
+                validators: {
+                    notEmpty: {
+                        message: 'This field is required.'
+                    }
+                }
+            },
+
+            groups: {
+                validators: {
+                    notEmpty: {
+                        message: 'If you do not select any group all groups assigned to the selected customers will be removed.'
+                    }
+                }
+            },
+        }
+    })
+
+</script>

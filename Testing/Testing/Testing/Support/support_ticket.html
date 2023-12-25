@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM</title>
+    <!--Bootstrap 5 CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/Bootstrap5/css/bootstrap.css">
+
+    <!--Bootstrap 5 JS--->
+    <script type="text/javascript" src="../../assets/Bootstrap5/js/bootstrap.bundle.min.js"></script>
+
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/de952d599f.js" crossorigin="anonymous"></script>
+
+    <!--datatables CSS--->
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/datatables/css/buttons.dataTables.min.css">
+
+    <!--Datatables js-->
+    <script type="text/javascript" src="../../assets/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./datatable/datatable.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.responsive.min.js"></script>
+
+    <!--Datatable dropdown----->
+    <script type="text/javascript" src="../../assets/js/datatables.pdfmake.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.vfs_fonts.js"></script>
+    <script type="text/javascript" src="../../assets/js/datatables.jszip.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/buttons.print.min.js"></script>
+
+    <!--Dropdown select-->
+    <link rel="stylesheet" href="../../assets/Bootstrap5/css/bootstrap-select.min.css">
+    <script src="../../assets/Bootstrap5/js/bootstrap-select.min.js"></script>
+
+    <!--summernote_textarea-->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
+    <!-- CSS -->
+    <!-- validation -->
+    <script src="https://Login.loyalwings.com/assets/js/formValidation.min.js"></script>
+    <script src="https://Login.loyalwings.com/assets/js/bootstrap_validation.min.js"></script>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+<style>
+    .content-form{
+        margin-top: 0px !important;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        margin-bottom: 10px !important;
+    }
+    .progress-fo{
+        padding: 4px 6px !important;
+    }
+    .newTicket{
+        font-size: 17px;
+    }
+</style>
+</head>
+
+
+<body class="content-form">
+
+    <div class="container-fluid">
+        <div class="" style="background-color: #fff;">
+            <div class="row qarow">
+                <div class="col-md-6 col-12 qarow">
+                    <button type="button" class="hrbtns contractbtn d-inline-block newTicket"
+                        onclick="window.location.href = 'newticket.html';">NEW TICKET
+                    </button>
+
+                    <div class="ctrfilter d-inline-block">
+                        <button type="button" class=" contractfilter d-inline-block border filter-open" data-bs-toggle="collapse"
+                            data-bs-target="#collapsetwo" aria-expanded="false" aria-controls="#collapstwo">
+                            <i class="fa fa-bar-chart mailicn" data-bs-toggle="tooltip" data-bs-title="Weekly Stats"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="col-md-6 qarow col-12">
+                    <div class="ctrfilter">
+
+                        <button type="button" class="contractfilter border ms-0" data-bs-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="true" data-bs-auto-close="outside">
+                            <i class="fa fa-filter" style="font-size: 12px" data-bs-toggle="tooltip" data-bs-title="Filter by"></i>
+                        </button>
+
+                        <ul id="one" class="dropdown-menu dropdown-menu-right width300 rounded-3 overflow-scrolls"
+                            aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">ALL</a></li>
+
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">Tickets assigned to me </a>
+                            </li>
+                            <li class="divider"></li>
+
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">Open </a>
+                            </li>
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">In progress </a>
+                            </li>
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">Answered</a>
+                            </li>
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">Jayarani</a>
+                            </li>
+
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">On hold</a>
+                            </li>
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">Closed</a>
+                            </li>
+                            <li class="">
+                                <a class="dropdown-item txt" href="#">ETR Design</a>
+                            </li>
+
+                            <li class="divider"></li>
+
+                            <li class="submenu" data-bs-auto-close="inside">
+                                <a class="dropdown-item txt" style="padding-left: 16px">By Assigned Member<i
+                                        class="bi bi-caret-right-fill"></i></a>
+                                <ul class="submenuul">
+                                    <li><a class="dropdown-item txt ">GTS Solution</a></li>
+                                </ul>
+                            </li>
+                    </div>
+                </div>
+            </div>
+            <hr class="fileline">
+        </div>
+
+            <div id="accordion">
+                <div class="row">
+                    <div class="col-md-12 accpadlftrt">
+                        <div id="collapsetwo" class="collapse collapse-content" data-parent="#accordion">
+                            <div class=" acordnbody" style="height:auto">
+                                <div id="chart_div" style="width: 100% !important;"></div>
+                                <hr class="fileline">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Tickets Summary</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">3</h4>
+                    <p style="color:#ff2d42">Open</p>
+                </div>
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">5</h4>
+                    <p style="color:#84c529">In Progress</p>
+                </div>
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">7</h4>
+                    <p style="color:#0000ff">Answered</p>
+                </div>
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">0</h4>
+                    <p style="color:#000000">Jayarani</p>
+                </div>
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">0</h4>
+                    <p style="color:#c0c0c0">On-Hold</p>
+                </div>
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">1</h4>
+                    <p style="color:#03a9f4">Closed</p>
+                </div>
+
+
+                <div class="col-md-2 col-6 border-end">
+                    <h4 class="text-primary procesNo">0</h4>
+                    <p style="color:#14dfea">ETR Design</p>
+                </div>
+            </div>
+
+        <hr class=" fileline">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="demo-html mt-0">
+                <table class="example display dataTable display responsive nowrap tblalign"
+                    style="width: 100%" aria-describedby="example_info">
+                    <thead class="theadrow">
+                        <tr>
+                            <th>
+                                <input type="checkbox">
+                            </th>
+                            <th>
+                                #
+                            </th>
+                            <th>
+                                Subject
+                            </th>
+                            <th>
+                                Tags
+                            </th>
+                            <th>
+                                Department
+                            </th>
+                            <th>
+                                Service
+                            </th>
+                            <th>
+                                Contact
+                            </th>
+                            <th>
+                                Status
+                            </th>
+                            <th>
+                                Priority
+                            </th>
+                            <th>
+                                Last reply
+                            </th>
+                            <th>
+                                Created
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" onclick="window.location.href = 'view.html';">56</a></td>
+                            <td><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> <a href="#" onclick="window.location.href = 'view.html';">test</a></br>
+                                <p class="header-effect">
+                                    <a href="#" onclick="window.location.href = 'view.html';"> View</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'edit.html';"> Edit</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'public_form.html';"> View Public </br>Form</a>
+                                    <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>Professional Services</td>
+                            <td></td>
+                            <td>teste</td>
+                            <td><span class="undelsp mappedsp progress-fo">In Progress</span></td>
+                            <td>Medium</td>
+                            <td>2023-08-14 20:27:43</td>
+                            <td>2023-07-29 00:47:21</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" onclick="window.location.href = 'view.html';">57</a></td>
+                            <td><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> <a href="#" onclick="window.location.href = 'view.html';">test</a></br>
+                                <p class="header-effect">
+                                    <a href="#" onclick="window.location.href = 'view.html';"> View</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'edit.html';"> Edit</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'public_form.html';"> View Public </br>Form</a>
+                                    <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>Professional Services</td>
+                            <td></td>
+                            <td>teste</td>
+                            <td><span class="undelsp mappedsp progress-fo">In Progress</span></td>
+                            <td>Medium</td>
+                            <td>2023-08-14 20:27:43</td>
+                            <td>2023-07-29 00:47:21</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" onclick="window.location.href = 'view.html';">58</a></td>
+                            <td><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> <a href="#" onclick="window.location.href = 'view.html';">test</a></br>
+                                <p class="header-effect">
+                                    <a href="#" onclick="window.location.href = 'view.html';"> View</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'edit.html';"> Edit</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'public_form.html';"> View Public </br>Form</a>
+                                    <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>Professional Services</td>
+                            <td></td>
+                            <td>teste</td>
+                            <td><span class="undelsp mappedsp progress-fo">In Progress</span></td>
+                            <td>Medium</td>
+                            <td>2023-08-14 20:27:43</td>
+                            <td>2023-07-29 00:47:21</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" onclick="window.location.href = 'view.html';">59</a></td>
+                            <td><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> <a href="#" onclick="window.location.href = 'view.html';">test</a></br>
+                                <p class="header-effect">
+                                    <a href="#" onclick="window.location.href = 'view.html';"> View</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'edit.html';"> Edit</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'public_form.html';"> View Public </br>Form</a>
+                                    <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>Professional Services</td>
+                            <td></td>
+                            <td>teste</td>
+                            <td><span class="undelsp mappedsp progress-fo">In Progress</span></td>
+                            <td>Medium</td>
+                            <td>2023-08-14 20:27:43</td>
+                            <td>2023-07-29 00:47:21</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="#" onclick="window.location.href = 'view.html';">60</a></td>
+                            <td><img src="../../assets/img/user.png" width="20" height="20" data-bs-toggle="tooltip" data-bs-title="GTS Solutions"> <a href="#" onclick="window.location.href = 'view.html';">test</a></br>
+                                <p class="header-effect">
+                                    <a href="#" onclick="window.location.href = 'view.html';"> View</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'edit.html';"> Edit</a>
+                                    <span class="black">|</span> <a href="#" onclick="window.location.href = 'public_form.html';"> View Public </br>Form</a>
+                                    <span class="black">|</span> <span class="sp-class3"> Delete</span>
+                                </p>
+                            </td>
+                            <td></td>
+                            <td>Professional Services</td>
+                            <td></td>
+                            <td>teste</td>
+                            <td><span class="undelsp mappedsp progress-fo">In Progress</span></td>
+                            <td>Medium</td>
+                            <td>2023-08-14 20:27:43</td>
+                            <td>2023-07-29 00:47:21</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+        </div>
+
+    </div>
+        <!-- modal  -->
+        <div class="modal fade" id="modal_md" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close closebtn" data-bs-dismiss="modal"></button>
+                        <h5 class="modal-title"></h5>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- modal -->
+    <script>
+        function showModal(url, title) {
+            $('#modal_md').on('shown.bs.modal', function () {
+                $('.selectpicker').selectpicker('refresh');
+            });
+            $('#modal_md').modal('show', { backdrop: 'true' });
+            $.ajax({
+                url: url,
+                success: function (response) {
+                    $('#modal_md .modal-title').html(title);
+                    $('#modal_md .modal-body').html(response);
+                }
+            });
+        }
+    </script>
+    <!-- for filter button -->
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '.dropdown-item', function () {
+                $(this).toggleClass('active');
+
+            })
+            $("ul#one>li:first-child").click(function () {
+                $('ul#one>li:first-child ~ li a').removeClass('active');
+            })
+            $("ul#one>li:first-child ~ li").click(function () {
+                $('ul#one>li:first-child a').removeClass('active');
+            })
+
+        })
+    </script>
+
+    <!--Multiselect-->
+    <script>
+        const dropdowns = document.querySelectorAll('.multiselect');
+
+        dropdowns.forEach(dropdown => {
+            const inputBox = document.createElement('input');
+            inputBox.type = 'hidden';
+            inputBox.classList.add('selected-values');
+            name = dropdown.getAttribute('data-name');
+            inputBox.setAttribute("name", name);
+            dropdown.after(inputBox);
+
+            dropdown.addEventListener('change', () => {
+                const selectedOptions = Array.from(dropdown.selectedOptions).map(option => option.value);
+                inputBox.value = selectedOptions.join(', ');
+            });
+        });
+    </script>
+
+    <!-- summernote -->
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 5',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+
+<!--tooltip-->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+  </script>
+  <!--datatable-->
+<script>
+    $(document).ready(function () {
+        var table = $('.example').DataTable({
+            language: { lengthMenu: '_MENU_' },
+            rowReorder: {
+                selector: 'td:nth-child(2)'
+            },
+            responsive: true,
+            dom: 'Blfrtip',
+            buttons: [
+                {
+                    text: 'EXPORT',
+                    extend: 'collection',
+                    buttons: ['excel', 'csv', 'pdf', 'print'],
+                    className: 'px-3'
+                },
+                {
+                    text: '<button type="button" onclick="showModal(`manipulation.html`,`Manipulation`)" style="font-size:12px; border:none;padding:0;background-color: inherit;">MANIPULATION</button>',
+                },
+                {
+                    text: '<i class="bi bi-arrow-repeat p-1" style="font-size:12px" data-bs-toggle="tooltip" data-bs-title="Reload"></i>'
+                }
+            ]
+        });
+    });
+</script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div id="chart_div"></div>
+
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'line'] });
+        google.charts.setOnLoadCallback(drawBackgroundColor);
+
+        function drawBackgroundColor() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('number', 'X');
+            data.addColumn('number', 'Dogs');
+
+            data.addRows([
+                [0, 0], [1, 10], [2, 23], [3, 17], [4, 18], [5, 9],
+                [6, 11], [7, 27], [8, 33], [9, 40], [10, 32], [11, 35],
+                [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
+                [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
+                [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
+                [30, 55], [31, 60], [32, 61], [33, 59], [34, 62], [35, 65],
+                [36, 62], [37, 58], [38, 55], [39, 61], [40, 64], [41, 65],
+                [42, 63], [43, 66], [44, 67], [45, 69], [46, 69], [47, 70],
+                [48, 72], [49, 68], [50, 66], [51, 65], [52, 67], [53, 70],
+                [54, 71], [55, 72], [56, 73], [57, 75], [58, 70], [59, 68],
+                [60, 64], [61, 60], [62, 65], [63, 67], [64, 68], [65, 69],
+                [66, 70], [67, 72], [68, 75], [69, 80]
+            ]);
+
+            var options = {
+                hAxis: {
+                    title: 'Time'
+                },
+                vAxis: {
+                    title: 'Popularity'
+                },
+                backgroundColor: '#fff'
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+            function resizeChart() {
+                chart.draw(data, options);
+            }
+
+            resizeChart();
+
+            window.addEventListener('resize', resizeChart);
+            
+        }
+    </script>
+
+</body>
+
+</html>

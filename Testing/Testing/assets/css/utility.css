@@ -1,0 +1,156 @@
+/**bulkpdf**/
+.bgc{
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 4px;
+    float: left;
+    margin-left: 20%;
+    margin-top: 15px;
+}
+.bulkbody{
+    background-color: rgb(216, 215, 215);
+}
+@media (max-width:770px) {
+    .bgc{
+       margin-left: 0% !important;
+       
+        
+    }
+}
+.bulkdata {
+    width: 98%;
+    margin: 3px 0px 3px 7px;
+    border-color: #919191 !important;
+    box-shadow: none!important;
+    height: 36px !important;
+}
+.bulktag {
+    margin-top: 9px;
+}
+
+
+/**databasebackup**/
+
+.txtp1{
+    font-weight: 500;
+    color: #03a9f4;
+    font-size: 13px;
+}
+
+
+.mbottom{
+    margin-bottom: 30px;
+}
+.databasebtn{
+    border-radius: 4px;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 4px 20px 4px;
+    font-size: 14px;
+    background-color: #2d3d452b;
+    font-family: var(--primary-font);
+    border: none;
+    border: 1px solid #e6e9eb !important;
+    float: right;
+margin-bottom: 18px;
+}
+.dataradio{
+    margin-top: 6px;
+margin-left: 3px;}
+
+.reqhdr{
+    margin-left: 3px;
+}
+
+.autobackhdr
+{
+    margin-left: 4px!important;
+}
+
+.backuplbl {
+    font-family: var(--primary-font);
+    margin-top: 14px;
+    margin-right: 5px;
+}
+
+
+/* autobackup modal bottom align*/
+.autobackup{
+    margin-bottom: 31px;
+}
+
+/**announcement**/
+
+.annview{
+    margin: 20px 12px;
+}
+.annhdr{
+    margin: 10px 4px;
+}
+.wel{
+    margin-left: 4px;
+    margin-bottom: 18px;
+}
+
+.formpanel{
+    background-color: #fff;
+     margin-left: 20%;
+     margin-right: 20%;
+     margin-top: 20px;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    
+}
+.formhead{
+    padding: 10px 0px 0px 21px;
+}
+.formbody{
+    padding: 0px 15px 0px 15px;
+}
+
+.blu{
+    accent-color: #5bc0de !important;
+}
+.inline{
+    display: inline;
+    float: right;
+}
+@media (max-width:770px) {
+    .formpanel{
+        background-color: #fff;
+         margin-left: 10%;
+         margin-right: 10%;
+       
+        
+    }   
+}
+.announcememtdes{
+    padding-right: 8px;
+    margin-left: 5px;
+}
+
+.annoucementbrndiv {
+    padding-top: 25px;
+    padding-top: 25px;
+}
+
+.content a{
+    color: #1b82b3 !important; 
+}
+
+/**activitylog**/
+.dateinputt{
+    border-color: #919191 !important;
+}
+.clrlogbtn{
+    box-shadow: none !important;
+    margin-top: 19px;
+    padding: 4px 10px;
+    font-size: 14px !important;
+}
+.editlink {
+    
+    font-size: medium;
+}
